@@ -89,7 +89,7 @@
                         <label class="flabel">Quantidade</label>
                     </div>
                     <div class="label-float">
-                        <input type="text" placeholder=" " name="estoque" id="estoque" class="algn-rigth" />
+                        <input type="text" readonly value="0" placeholder=" " name="estoque" id="estoque" class="algn-rigth" />
                         <label class="flabel">Estoque</label>
                     </div>
                 </div>

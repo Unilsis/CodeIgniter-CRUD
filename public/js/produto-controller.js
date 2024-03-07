@@ -34,7 +34,23 @@ window.onload = () => {
 };
 
 function getValue() {
-    document.getElementById('estoque').value = document.getElementById('qtd').value
+    let estoque = 0;
+    if(!isNaN(document.getElementById('estoque').value)) {
+        estoque = parseFloat(document.getElementById('estoque').value);
+    }
+
+    setTimeout(() => {
+        if(!isNaN(document.getElementById('estoque').value)){
+            estoque += parseFloat(document.getElementById('qtd').value);
+            document.getElementById('estoque').value = estoque
+
+            if(estoque > 100000){
+                document.getElementById('estoque').value = estoque = 0
+                document.getElementById('estoque').value = 0
+            }
+        }
+    }, 500);
+    
 }
 
 function salvar() {
@@ -46,7 +62,7 @@ function salvar() {
         qtd: document.getElementById('qtd').value,
         estoque: document.getElementById('estoque').value
     }
-    console.log(isNaN(data.custo))
+    
     if (data.descricao === '' || data.descricao === ' ' || data.descricao === null) {
         showMessage('A descrição do produto não pode ser vazio.', 'warning', 2500); 
     } else if (data.custo === '' || data.custo === ' ' || data.custo === null || isNaN(data.custo)) {
@@ -81,7 +97,7 @@ function adicionarProduto(data) {
             }, 4700);
         },
         error: (error) => {
-            showMessage(resp.errors + '\n' + resp.message, 'warning', 4500)
+            showMessage(error.errors + '\n' + error.message, 'warning', 4500)
         }
     });
 }

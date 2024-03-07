@@ -1,3 +1,4 @@
+
 function showMessage(mensagem, tipo, tempo) {
 
     // se houver outro alert desse sendo exibido, cancela essa requisição

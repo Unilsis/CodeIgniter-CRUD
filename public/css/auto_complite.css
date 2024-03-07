@@ -1,0 +1,54 @@
+*{
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  ::selection{
+    color: #fff;
+    background: #664AFF;
+  }
+
+  .autocomplit{
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  .autocomplit input{
+    width: 100%;
+  }
+  
+  .autocomplit .list{
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    max-height: 150px;
+    z-index: 99999999999999999;
+    background-color: white;
+  }
+  
+  .autocomplit.active .list{
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .list li{
+    list-style: none;
+    padding: 4px 8px;
+    display: none;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+  }
+  
+  .autocomplit.active .list li{
+    display: block;
+  }
+  .list li:hover{
+    background: #efefef;
+  }
+  

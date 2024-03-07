@@ -1,0 +1,184 @@
+.row-inline{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.id{
+    width: 70px;
+}
+
+.forms{
+    width: 100%;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.forms .forms-table{
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+
+.forms .forms-table .header{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    padding: 5px;
+    top: 10px;
+}
+
+.forms .forms-table .header .buttons{
+    display: inline-flex;
+}
+
+.forms .forms-table .header .buttons button{
+    margin: 2px;
+}
+
+.forms .forms-table .header .text{
+    position: absolute;
+    left: 5px;
+}
+
+.forms .forms-table td{
+    position: relative;
+}
+
+.forms .forms-table td:hover  .options{
+    opacity: 1;
+    transition: all 0.7s ease-in-out;
+}
+
+.forms .forms-table .options{
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+}
+
+.forms .forms-table .options i{
+    margin: 3px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.forms .forms-table .options i:active{
+    font-size: 1.2rem;
+}
+/*Forms Imputs*/
+.forms .forms-input{
+    width: 600px;
+    height: 100%;
+    position: absolute;
+    right: -10px;
+    background-color: rgb(255, 255, 255);
+    z-index: 15;
+    overflow: hidden;
+}
+
+.forms .forms-input.show{
+    width: 600px;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.forms .forms-input.hid{
+    width: 0px;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.forms .forms-input .forms-foto{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.forms .forms-input .forms-foto .foto{
+    width: 137px;
+    height: 137px;
+    position: relative;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin-right: 5px;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.forms .forms-input .forms-foto .foto img{
+    width: 137px;
+    height: 137px;
+}
+
+.forms .forms-input .forms-foto .foto input{
+    display: none;
+}
+
+.forms .forms-input .forms-foto .add-photo{
+    position: absolute;
+    right: 5px;
+    bottom: -15px;
+    font-size: 2.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.forms .forms-input .forms-foto .add-photo:hover:active{
+    font-size: 2rem;
+    color: brown;
+}
+
+.forms .forms-input .forms-foto .foto:hover{
+    color: rgb(110, 105, 105);
+}
+
+@media screen and (max-width : 820px) {
+    .forms .forms-input .forms-foto{
+        flex-direction: column;
+    }
+
+    .forms .forms-input .forms-foto .foto{
+        width: 100%;
+        transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .forms .forms-input .forms-foto .foto img{
+        width: 140px;
+        transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .forms .forms-input .inp{
+        margin-top: 20px;
+    }
+
+    .forms .forms-input{
+        width: 100%;
+        right: 0px;
+
+    }
+    
+    .forms .forms-input.show{
+        width: 100%;
+        transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .forms .forms-input.hid{
+        width: 0px;
+        transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .responsive{
+        display: none;
+    }
+}

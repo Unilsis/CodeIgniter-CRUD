@@ -1,6 +1,7 @@
 <?php
+
+use App\Controllers\ProdutoController;
 use CodeIgniter\Router\RouteCollection;
-use App\Controllers\Project;
 
 /**
  * @var RouteCollection $routes
@@ -8,12 +9,10 @@ use App\Controllers\Project;
 $routes->get('/', 'Home::index');
 $routes->setDefaultController('Home');
 $routes->setDefaultMethod('Home');
-$routes->get('/project/projectos', [Project::class, 'index']);
-$routes->post('/project/projectos/create', [Project::class, 'create']);
-$routes->put('/project/projectos/editar', [Project::class, 'update']);
-$routes->post('/project/projectos/delete', [Project::class, 'deleteProgect']);
-//$routes->get('/produtos/delete', [Project::class, 'delete']);
-//$routes->get('pages', [Pages::class, 'index']);
+$routes->get('/crud_codeigniter4', [ProdutoController::class, 'index']);
+$routes->post('/crud_codeigniter4/create', [ProdutoController::class, 'create']);
+$routes->put('/crud_codeigniter4/update', [ProdutoController::class, 'update']);
+$routes->post('/crud_codeigniter4/deletePD', [ProdutoController::class, 'deletePD']);
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);

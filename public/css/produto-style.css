@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 13pt;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+li{
+    list-style: none;
+    color: black;
+}
+
+header{
+    width: 100%;
+    padding: 14px 0px;
+    background-color: rgb(245, 243, 243);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+}
+header .navegators{
+    max-width: 300px;
+    position: absolute;
+    right: 15px;
+    top: 12px;
+}
+header .navegators ul{
+    display: inline-flex;
+}
+header .navegators ul li{
+    margin: 3px;
+}
+header .navegators ul li a{
+    font-size: 13px;
+}
+.butons{
+    display: flex;
+    justify-content: right;
+    padding: 10px 15px;
+}
+.card-body{
+    padding: 0 15px;
+}
+
+.inform{
+    width: 100%;
+    position: relative;
+}
+.inform label{
+    float: right;
+}

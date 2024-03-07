@@ -1,0 +1,178 @@
+.label-float{
+  width: 100%;
+  min-width: 18px;
+  padding: 2px;
+  position: relative;
+}
+.label-float i{
+  align-items: flex-end;
+  position: absolute;
+  right: 3px;
+  top: 5px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.label-float input, .label-float textarea, .label-float select{
+  border: 1;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid #030113cc;
+  outline: none;
+  width: 100%;
+  position: static;
+  min-width: 20px;
+  font-size: 12pt;
+  background-color: transparent;
+  font-weight: bold;
+  transition: all .5s ease-out;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -webkit-appearance:none;
+  border-radius:0;
+}
+
+.label-float textarea{
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.label-float input:focus, .label-float textarea:focus, .label-float select:focus{
+  box-shadow: 0px 0.5px 0px 0px #258cecd3;
+}
+
+.label-float input::placeholder, .label-float textarea::placeholder{
+  color:transparent;
+}
+
+.label-float .flabel{
+  pointer-events: none;
+  position: initial;
+  font-weight: bold;
+  font-size: 10pt;
+  float: left;
+  top: 0;
+  left: 0;
+  margin-bottom: -10px;
+  margin-left: 3px;
+  transition: all .5s ease-out;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+}
+
+.label-float input:required:invalid + .flabel{
+  background-color: red;
+}
+
+.label-float input:required:invalid + .flabel, .label-float select:required:invalid + .flabel{
+  color: red;
+  margin-top: -20px;
+}
+
+.label-float input + .flabel, .label-float select + .flabel{
+  color: rgb(0, 26, 255);
+  margin-top: -20px;
+}
+
+.label-float input:focus:required:invalid, .label-float textarea:focus:required:invalid, .label-float select:focus:required:invalid{
+  border-bottom: 2px solid red;
+}
+
+.label-float input:required:invalid + .flabel::after, .label-float textarea:required:invalid + .flabel::after, .label-float select:required:invalid + .flabel::after{
+  content: ' *';
+  color: red;
+  font-size: 12px;
+}
+
+.label-float input:required:invalid, .label-float textarea:required:invalid, .label-float select:required:invalid{
+  color: red;
+}
+
+.label-float input:focus + .flabel,
+.label-float input:not(:placeholder-shown) + .flabel{
+  font-size: 12px;
+  margin-top: -35px;
+  color: #3951b2;
+}
+/*Estilização para textarea*/
+.label-float textarea:required:invalid + .flabel{
+  color: red;
+  margin-top: -80px;
+}
+
+.label-float textarea + .flabel{
+  color: rgb(0, 17, 255);
+  margin-top: -80px;
+}
+
+.label-float textarea:focus + .flabel,
+.label-float textarea:not(:placeholder-shown) + .flabel{
+  font-size: 12px;
+  margin-top: -94px;
+  color: #3951b2;
+}
+
+.label-float.row-6 textarea:required:invalid + .flabel{
+  color: red;
+  margin-top: -140px;
+}
+
+.label-float.row-6 textarea + .flabel{
+  color: rgb(0, 17, 255);
+  margin-top: -155px;
+}
+
+.label-float.row-6 textarea:focus + .flabel,
+.label-float.row-6 textarea:not(:placeholder-shown) + .flabel{
+  font-size: 12px;
+  margin-top: -157px;
+  color: #3951b2;
+}
+
+.label-float.row-8 textarea:required:invalid + .flabel{
+  color: red;
+  margin-top: -185px;
+}
+
+.label-float.row-8 textarea + .flabel{
+  color: rgb(0, 17, 255);
+  margin-top: -202px;
+}
+
+.label-float.row-8 textarea:focus + .flabel,
+.label-float.row-8 textarea:not(:placeholder-shown) + .flabel{
+  font-size: 12px;
+  margin-top: -202px;
+  color: #3951b2;
+}
+
+.label-float.row-10 textarea:required:invalid + .flabel{
+  color: red;
+  margin-top: -230px;
+}
+
+.label-float.row-10 textarea + .flabel{
+  color: rgb(0, 17, 255);
+  margin-top: -245px;
+}
+
+.label-float.row-10 textarea:focus + .flabel,
+.label-float.row-10 textarea:not(:placeholder-shown) + .flabel{
+  font-size: 12px;
+  margin-top: -245px;
+  color: #3951b2;
+}
+/*Estilização para Select*/
+.label-float select{
+  cursor: pointer;
+}
+
+.label-float select:focus + .flabel,
+.label-float select:not(:placeholder-shown) + .flabel{
+  font-size: 14px;
+  margin-top: -40px;
+  color: #3951b2;
+}
+.label-15{
+  margin-top: 15px;
+}
